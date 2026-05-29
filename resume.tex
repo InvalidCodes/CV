@@ -1,0 +1,202 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+
+% -------------------------------------------------------
+%  LANGUAGE SWITCH — uncomment exactly ONE line
+% -------------------------------------------------------
+\langcntrue   % 中文输出 Chinese output
+% \langcnfalse  % English output (default)
+% -------------------------------------------------------
+
+% Chinese font support (only loaded when \langcntrue is set)
+\iflangcn
+  \usepackage{zh_CN-Adobefonts_external}
+  \usepackage{linespacing_fix}
+
+\else
+  \setmainfont{Helvetica Neue}
+  % Section headers: keep texgyretermes small-caps (花体) look
+  \newfontfamily\secfont[
+    Path            = fonts/Main/ ,
+    Extension       = .otf ,
+    UprightFont     = *-regular ,
+    BoldFont        = *-bold ,
+    SmallCapsFont   = Fontin-SmallCaps
+  ]{texgyretermes}
+  \usepackage{xstring}
+  % First letter \LARGE, rest \Large\scshape — both in texgyretermes
+  \newcommand{\secheading}[1]{%
+    \StrLeft{#1}{1}[\secFirst]%
+    \StrGobbleLeft{#1}{1}[\secRest]%
+    {\secfont\LARGE\secFirst}{\secfont\Large\scshape\secRest}%
+  }
+  \titleformat{\section}
+    {\raggedright}
+    {}{0em}
+    {\secheading}
+    [{\titlerule[1.0pt]}]
+\fi
+\usepackage{xcolor}
+
+\begin{document}
+\pagenumbering{gobble}
+
+% ---- Personal Info ----
+\name{\biline{葛芸菲}{Faye Ge}}
+\basicInfo{%
+  \email{yunfeige2027@u.northwestern.edu} \textbf{|}
+  \phone{(+86) 173-1768-0568} \textbf{|}
+  \faGithub\ \href{https://github.com/InvalidCodes}{InvalidCodes}}
+
+% ---- Education ----
+\section{\iflangcn 教育背景\else Education\fi}
+
+\begin{education}{
+  cn-school   = {美国西北大学},
+  en-school   = {Northwestern University},
+  cn-location = {芝加哥, 美国},
+  en-location = {Chicago, IL, USA},
+  start-year  = 2025, start-month = 9,
+  end-year    = 2027, end-month   = 6,
+}
+\biline{\textit{硕士}\ 计算机工程\ |\ GPA 4.0 / 4.0}{\textit{M.S.} in Computer Engineering\ |\ GPA 4.0/4.0}
+\end{education}
+
+\begin{education}{
+  cn-school   = {上海大学},
+  en-school   = {Shanghai University},
+  cn-location = {上海},
+  en-location = {Shanghai, China},
+  start-year  = 2021, start-month = 9,
+  end-year    = 2025, end-month   = 6,
+}
+\biline{\textit{学士}\ 计算机科学与技术\ |\ GPA 84 / 100\ |\ 新生入学奖学金（前5\%）}{\textit{B.Eng.} in Computer Science and Technology\ |\ Freshman Scholarship (Top 5\%)}
+\end{education}
+
+% ---- Publications (content is English-only; in submission) ----
+% TODO: 替换为真实标题 / 作者名单 / arXiv 或项目链接（[]内为可选 code 链接，第4参数为 venue 链接）
+\section{\iflangcn 论文发表\else Publications\fi}
+\begin{enumerate}
+  \item \paper{2026}{NeurIPS 2026 (Under Review)}{}%
+    {\textcolor[HTML]{CC7260}{\textbf{Yunfei Ge}$^*$}, Anbang Liu$^*$, Qineng Wang$^*$, et al., Manling Li}%
+    {MindTopo: Can Foundation Models Reason in Topological Space?}
+  \item \paper{2026}{EMNLP 2026 (Under Review)}{}%
+    {Xinyu Che$^*$, Junqi Xiong$^*$, \textcolor[HTML]{CC7260}{\textbf{Yunfei Ge}$^*$}, et al.}%
+    {MMG2Skill: Can Agents Distill In-the-Wild Guides into Self-Evolving Skills?}
+\end{enumerate}
+{\footnotesize $^*$\,\iflangcn 共同一作\else Equal contribution\fi}
+
+% ---- Research Experience ----
+\section{\iflangcn 科研经历\else Research Experience\fi}
+
+\begin{experience}{
+  cn-company  = {MLL Lab，美国西北大学},
+  en-company  = {MLL Lab, Northwestern University},
+  start-year  = 2025, start-month = 9,
+  ongoing     = true,
+  role        = {Research Assistant},
+  topic       = {VLM / RL Spatial Reasoning | Adv. Prof. Manling Li},
+}
+  \biitem{提出 MindTopo —— 首个系统评测多模态大模型（MLLM）拓扑空间推理能力的基准；以皮亚杰认知框架将拓扑直觉拆解为五类原语（连续、分离、顺序、封闭、绳结），并在“静态感知推理”与“交互式规划（MDP）”两个认知层级上构建 13 类任务、共 11{,}016 个实例，全程参数化生成、难度可控、标签由构造保证。}{Proposed MindTopo, the first benchmark systematically evaluating topological spatial reasoning in multimodal LLMs; grounded in Piaget's cognitive framework, decomposed topological intuition into five primitives (continuity, separation, order, enclosure, knots) and built 13 task types / 11{,}016 instances across two cognitive levels --- static-scene reasoning and interactive planning (MDP) --- via parametric, difficulty-controllable generation with ground-truth labels by construction.}
+  \biitem{开发 BlenderSuperKnot 插件，从 Gauss code 程序化生成 3D 绳结数据集，并设计 Blender → MuJoCo 跨引擎管线（球关节胶囊链物理收紧 + 高保真渲染），实现基于交叉数、遮挡率、段间距的自动难度控制。}{Developed BlenderSuperKnot plugin for procedural 3D knot dataset generation from Gauss codes, and designed a cross-engine Blender $\to$ MuJoCo pipeline (ball-joint capsule chain physics tightening + high-fidelity rendering) with automatic difficulty control based on crossing number, occlusion rate, and segment spacing.}
+  \biitem{系统评测 11 个前沿 MLLM，并将图像/视频生成模型作为“视觉世界模型”进行工具增强探针；揭示模型能在静态场景识别拓扑关系、却无法在动作序列中维持与操作的关键失效模式（最优模型 54\% vs.\ 人类 97\%），并发现图像生成可补足感知通道、而视频生成系统性违背拓扑动力学，无法充当尊重拓扑不变量的世界模型。}{Systematically evaluated 11 frontier MLLMs and probed image/video generative models as visual world models under tool-use augmentation; revealed that models recognize topological relations in static scenes yet fail to maintain or operate on them across action sequences (best model 54\% vs.\ 97\% human), and showed image generation supplies a missing perception channel while video generation systematically violates topological dynamics, failing as a world model that respects topological invariants.}
+\end{experience}
+
+\begin{experience}{
+  cn-company  = {Scale Lab，上海交通大学},
+  en-company  = {Scale Lab, Shanghai Jiao Tong University},
+  start-year  = 2025, start-month = 4,
+  end-year    = 2025, end-month   = 7,
+  role        = {Research Assistant},
+  topic       = {RoboTwin Bimanual Manipulation | Adv. Prof. Yao Mu},
+}
+  \biitem{为 RoboTwin 基准设计并实现双臂协作操作任务，如pick-and-place 及柔性体操作；使用 Isaac Sim 搭建仿真环境，自动化物体属性与物理参数随机化以增强模型泛化。}{Designed and implemented bimanual collaborative manipulation tasks (pick-and-place and deformable object manipulation) for RoboTwin benchmark; built Isaac Sim simulation environments with automated object property and physics parameter randomization.}
+  \biitem{通过遥操作设备与 MoCap 系统采集专家演示；编写 Python 数据处理脚本，产出约 50 条高质量轨迹供模仿学习使用。}{Collected expert demonstrations via teleoperation devices and MoCap system; developed Python data processing scripts, producing $\sim$50 high-quality trajectories for imitation learning.}
+\end{experience}
+
+\begin{experience}{
+  cn-company  = {上海大学},
+  en-company  = {Shanghai University},
+  start-year  = 2025, start-month = 2,
+  end-year    = 2025, end-month   = 5,
+  role        = {Graduation Project},
+  topic       = {Microservice Latency Prediction | Adv. Prof. Yang Liu},
+}
+  \biitem{基于 GCN 与贝叶斯优化提出 P99 延迟预测与调度策略；在阿里巴巴生产数据集上预测误差 4.1\%，P99 延迟降低 28\%。}{Proposed P99 latency prediction and scheduling strategy based on GCN and Bayesian optimization; achieved 4.1\% prediction error and 28\% P99 latency reduction on Alibaba production dataset.}
+\end{experience}
+
+% ---- Professional Experience ----
+\section{\iflangcn 实习经历\else Professional Experience\fi}
+
+\begin{experience}{
+  cn-company  = {Wegwiser（波士顿，美国）},
+  en-company  = {Wegwiser (Boston, USA)},
+  start-year  = 2025, start-month = 11,
+  ongoing     = true,
+  role        = {AI Engineer Intern},
+  topic       = {RAG \& LLM Application},
+}
+  \biitem{设计并实现双通路 RAG 问答系统：基于 LangChain 构建 PDF 解析 → 递归字符分块（chunk=1000, overlap=200）→ OpenAI Embedding → Chroma 向量检索 → LLM 生成全链路；将知识库拆分为战略摘要与产品文档两个独立向量库，分别通过 LLMChain（T=0.2）和 RetrievalQA（T=0）实现"战略对齐 + 事实检索"双视角生成。}{Designed and implemented a dual-pathway RAG QA system via LangChain: PDF parsing $\to$ recursive character chunking (chunk=1000, overlap=200) $\to$ OpenAI Embedding $\to$ Chroma vector retrieval $\to$ LLM generation; split knowledge base into strategic summary and product documentation stores, using LLMChain (T=0.2) and RetrievalQA (T=0) for dual-perspective generation.}
+  \biitem{基于 LangGraph 设计并实现 Supervisor + 4 Specialist 多智能体架构：Supervisor 节点利用 GPT-4o-mini 结构化输出进行意图分类与动态路由，PM/设计/工程/通用四个专家 Agent 各自绑定差异化工具链（RAG 检索、PRD 读取、指标查询等）并以 ReAct 模式自主推理；通过 FastAPI SSE 实现逐 token 流式响应与 Agent 状态实时推送，端到端替换原单链 RAG 系统。}{Designed and implemented Supervisor + 4 Specialist multi-agent architecture using LangGraph: Supervisor node leverages GPT-4o-mini structured output for intent classification and dynamic routing; PM/Designer/Engineer/General specialist agents each bind differentiated tool chains (RAG retrieval, PRD reader, metrics fetcher, etc.) with ReAct-style autonomous reasoning; implemented token-level SSE streaming and real-time agent status push via FastAPI, replacing the original single-chain RAG system end-to-end.}
+  \biitem{开发 AI 辅助设计评审模块，基于可用性启发式规则实现设计稿自动评分与修复建议生成；实现基于 EWMA 加权的成员技能评估模型与任务-技能匹配排序算法。}{Developed AI-assisted design review module with automatic scoring and fix suggestions based on usability heuristics; implemented EWMA-weighted skill assessment model and task-skill matching algorithm for team scheduling.}
+  \biitem{搭建 Next.js + Express + FastAPI 三层架构并实现 JWT 鉴权链路透传；基于 Socket.io 封装实时协作通信层，支撑多角色在线协同场景。}{Built Next.js + Express + FastAPI three-tier architecture with JWT authentication passthrough; encapsulated real-time collaboration layer via Socket.io for multi-role online collaboration.}
+\end{experience}
+
+\begin{experience}{
+  cn-company  = {多萝洛（上海）},
+  en-company  = {Duo LuoLuo (Shanghai)},
+  start-year  = 2025, start-month = 4,
+  end-year    = 2025, end-month   = 8,
+  role        = {AI Engineer Intern},
+  topic       = {LLM Fine-tuning \& Inference Optimization},
+}
+  \biitem{搭建 Qwen2.5 全流程微调管线，基于 MySQL 设计数据验证流水线对 4000 条合成数据进行质量过滤，训练质量提升 13\%。}{Built Qwen2.5 full-pipeline fine-tuning workflow; designed MySQL-based data validation pipeline to filter 4K synthetic samples, improving training quality by 13\%.}
+  \biitem{构建基于 Elasticsearch 的 RAG 检索系统，支持实时索引，检索准确率提升 15\%。}{Built Elasticsearch-based RAG retrieval system with real-time indexing, improving retrieval accuracy by 15\%.}
+  \biitem{利用 TensorRT 与 ONNX Runtime 优化推理管线，通过 INT8 PTQ 量化实现推理延迟降低 30\%。}{Optimized inference pipeline with TensorRT and ONNX Runtime; achieved 30\% latency reduction via INT8 PTQ quantization.}
+\end{experience}
+
+\begin{experience}{
+  cn-company  = {上汽大通（上海）},
+  en-company  = {SAIC Maxus (Shanghai)},
+  start-year  = 2023, start-month = 11,
+  end-year    = 2024, end-month   = 5,
+  role        = {Software Engineer Intern},
+  topic       = {Microservices \& System Architecture},
+}
+  \biitem{将系统重构为基于 Spring Boot + Docker 的微服务架构，解耦业务逻辑与第三方工业软件依赖。}{Refactored legacy monolithic system into Spring Boot + Docker microservices architecture, decoupling business logic from third-party industrial software dependencies.}
+  \biitem{基于 Kafka 设计异步任务调度引擎，提升系统并发吞吐与故障容忍；构建 RESTful API 自动化工业数据交换，使手工录入延迟降低 50\%。}{Designed Kafka-based async task scheduling engine for improved concurrency and fault tolerance; built RESTful API for automated industrial data exchange, reducing manual entry latency by 50\%.}
+\end{experience}
+
+% ---- Technical Skills ----
+\section{\iflangcn 技术技能\else Technical Skills\fi}
+\biline{%
+  \textbf{编程语言：}Python、C++ \quad
+  \textbf{机器学习：}PyTorch、Hugging Face Transformers、LLaMA-Factory、LoRA / QLoRA、GRPO / PPO \\
+  \textbf{工具链：}Git、Linux、Docker、K8s \quad
+  \textbf{机器人：}ROS、MuJoCo、Isaac Sim、Blender、SolidWorks
+}{%
+  \textbf{Languages:} Python, C++ \quad
+  \textbf{ML:} PyTorch, Hugging Face Transformers, LLaMA-Factory, LoRA / QLoRA, GRPO / PPO \\
+  \textbf{Tools:} Git, Linux, Docker, K8s \quad
+  \textbf{Robotics:} ROS, MuJoCo, Isaac Sim, Blender, SolidWorks
+}
+
+% ---- Competitions & Projects ----
+\section{\iflangcn 竞赛 \& 项目\else Competitions \& Projects\fi}
+
+\begin{experience}{
+  cn-company  = {RoboMaster 机器人竞赛\ \textcolor{gray76}{全国三等奖}},
+  en-company  = {RoboMaster Robotics Competition\ \textcolor{gray76}{National Third Prize}},
+  start-year  = 2021, start-month = 9,
+  end-year    = 2023, end-month   = 4,
+  role        = {Vision Group Member},
+  topic       = {Computer Vision \& Autonomous Navigation},
+}
+  \biitem{基于 YOLOv5 训练装甲板四点关键点检测模型，结合 PnP 位姿解算输出目标相对云台的偏转角度，经串口通信下发电控实现自动瞄准；使用 OpenVINO 部署至 Intel NUC，推理帧率稳定在 60+ FPS。}{Trained YOLOv5-based armor plate keypoint detection model; combined with PnP pose estimation to compute gimbal deflection angles, transmitted to embedded controller via serial for auto-aiming; deployed with OpenVINO on Intel NUC at 60+ FPS.}
+  \biitem{基于 2D 激光雷达 + Cartographer SLAM + ROS Navigation 为自动步兵开发自主导航系统，实现动态赛场环境下的实时建图、全局路径规划与局部避障。}{Developed autonomous navigation for infantry robot using 2D LiDAR + Cartographer SLAM + ROS Navigation stack, enabling real-time mapping, global path planning, and local obstacle avoidance in dynamic arena environments.}
+\end{experience}
+
+\end{document}

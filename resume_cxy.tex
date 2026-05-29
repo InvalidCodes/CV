@@ -1,0 +1,154 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+
+% -------------------------------------------------------
+%  LANGUAGE SWITCH — uncomment exactly ONE line
+% -------------------------------------------------------
+\langcntrue   % 中文输出 Chinese output
+% \langcnfalse  % English output (default)
+% -------------------------------------------------------
+
+% Chinese font support (only loaded when \langcntrue is set)
+\iflangcn
+  \usepackage{zh_CN-Adobefonts_external}
+  \usepackage{linespacing_fix}
+
+\else
+  \setmainfont{Carlito}
+  % Section headers: keep texgyretermes small-caps (花体) look
+  \newfontfamily\secfont[
+    Path            = fonts/Main/ ,
+    Extension       = .otf ,
+    UprightFont     = *-regular ,
+    BoldFont        = *-bold ,
+    SmallCapsFont   = Fontin-SmallCaps
+  ]{texgyretermes}
+  \usepackage{xstring}
+  % First letter \LARGE, rest \Large\scshape — both in texgyretermes
+  \newcommand{\secheading}[1]{%
+    \StrLeft{#1}{1}[\secFirst]%
+    \StrGobbleLeft{#1}{1}[\secRest]%
+    {\secfont\LARGE\secFirst}{\secfont\Large\scshape\secRest}%
+  }
+  \titleformat{\section}
+    {\raggedright}
+    {}{0em}
+    {\secheading}
+    [{\titlerule[1.0pt]}]
+\fi
+\usepackage{xcolor}
+
+\begin{document}
+\pagenumbering{gobble}
+
+% ---- Personal Info ----
+\name{\biline{车心宇}{Xinyu Che}}
+\basicInfo{%
+  \email{kosmoche@gmail.com} \textbf{|}
+  \phone{(+86) 198-2271-3615} \textbf{|}
+  \faHome\ \href{https://kosmoche.github.io}{kosmoche.github.io}}
+
+% ---- Education ----
+\section{\iflangcn 教育背景\else Education\fi}
+
+\begin{education}{
+  cn-school   = {西安交通大学},
+  en-school   = {Xi'an Jiaotong University},
+  cn-location = {西安, 陕西},
+  en-location = {Xi'an, Shaanxi, China},
+  start-year  = 2025, start-month = 9,
+  end-year    = 2028, end-month   = 6,
+}
+\biline{\textit{硕士}\ 计算机技术}{\textit{Master} in Computer Technology}
+\end{education}
+
+\begin{education}{
+  cn-school   = {上海大学},
+  en-school   = {Shanghai University},
+  cn-location = {上海},
+  en-location = {Shanghai, China},
+  start-year  = 2021, start-month = 9,
+  end-year    = 2025, end-month   = 6,
+}
+\biline{\textit{学士}\ 智能科学与技术}{\textit{B.Eng.} in Intelligence Science and Technology}
+\end{education}
+
+% ---- Publications (content is English-only) ----
+\section{\iflangcn 论文发表\else Publications\fi}
+\begin{enumerate}
+  \item \paper[https://github.com/NJU-LINK/WebCompass]{2026}{Preprint}{https://arxiv.org/abs/2604.18224}%
+    {X. Lei$^*$, \textcolor[HTML]{CC7260}{\textbf{X. Che$^*$}}, J. Xiong$^*$, et al.}%
+    {WebCompass: Towards Multimodal Web Coding Evaluation for Code Language Models}
+  \item \paper[https://github.com/yayayacc/TIDE]{2026}{Preprint}{https://arxiv.org/abs/2602.02196}%
+    {H. Yan$^*$, \textcolor[HTML]{CC7260}{\textbf{X. Che$^*$}}, F. Xu$^{*\dagger}$, et al.}%
+    {TIDE: Trajectory-based Diagnostic Evaluation of Test-Time Improvement in LLM Agents}
+\end{enumerate}
+
+% ---- Professional Experience ----
+\section{\iflangcn 专业经历\else Professional Experience\fi}
+
+% Template for an ongoing internship:
+\begin{experience}{
+  cn-company  = {南京大学\ LINKLAB},
+  en-company  = {Nanjing University LINKLAB},
+  start-year  = 2025, start-month = 12,
+  ongoing     = true,
+  role        = {Research Assistant},
+  topic       = {Code Generation | GUI Agent},
+}
+  \biitem{主导 Anything2Skill 框架的设计与实现 —— 将多模态教程自动抽取为 Skills（SOP）以驱动 VLM Agent 在异构 Benchmark 中执行任务的统一框架；统一接入 OSWorld 桌面 GUI、Minecraft 开放世界与 9 个 RLCard 卡牌游戏；设计 Reviser 修订机制，基于执行轨迹反馈对 Skill 进行迭代优化。}{Led the design and implementation of Anything2Skill --- a unified framework that auto-extracts multimodal tutorials into Skills (SOPs) to drive VLM agents across heterogeneous benchmarks (OSWorld desktop GUI, Minecraft, 9 RLCard card games); designed a Reviser mechanism that iteratively refines skills from execution-trajectory feedback.}
+  \biitem{作为核心贡献者参与 WebCompass 的构建 —— 首个全生命周期多模态网页编程基准，统一文本/图片/视频三种模态与生成/编辑/修复三类任务共七个子类别；负责编辑与修复任务的数据构造、Pipeline 搭建以及多维度（执行性/交互性/美观性）LLM-as-a-Judge 评测框架的设计与实现；主导完成 14 个主流大模型的系统性评测与分析。}{Core contributor and co-lead of WebCompass --- the first full-lifecycle multimodal web coding benchmark unifying 3 modalities $\times$ 3 task types into 7 categories; led the editing/repair data construction pipeline and the design \& implementation of the multi-dimensional (Execution/Interactivity/Aesthetics) LLM-as-a-Judge evaluation framework; led systematic evaluation and analysis of 14 mainstream LLMs.}
+\end{experience}
+
+\begin{experience}{
+  cn-company  = {腾讯\ 光子工作室},
+  en-company  = {Tencent LightSpeed},
+  start-year  = 2025, start-month = 4,
+  end-year    = 2025, end-month   = 8,
+  role        = {Research Intern},
+  topic       = {Reinforcement Learning | AI Memory | Level Generation},
+}
+  \biitem{长期记忆系统设计与训练：定义记忆抽取的核心特征维度（玩家偏好、关系状态、关键事件等）并设计基于时效性与重要性的更新与衰减机制；依托玩家真实对话构造数据集，统一建模记忆抽取（Extraction）与更新总结（Summary）两类任务，采用 SFT 融合 CoT 训练，显著提升长文本信息抽取与记忆整合的准确率。}{Long-term memory system design \& training: defined core feature dimensions for memory extraction (player preferences, relational states, key events, etc.) and recency/importance-based update \& decay mechanisms; built dataset from real player conversations, jointly modeled memory extraction (Extraction) and update-oriented summarization (Summary), applied SFT with CoT integration, significantly improving long-context extraction and memory consolidation accuracy.}
+  \biitem{模型后训练优化：针对知识遗忘、机械重复及语气僵硬等核心问题，训练 Reward 模型以提供细粒度反馈信号；打通 Online RL 训练链路，将原有的 Offline DPO 改为 Online DPO，同时进行了 GRPO 算法的探索，显著提升了表达多样性与拟人化效果。}{Post-training optimization: trained Reward Model for fine-grained feedback signals; upgraded Offline DPO to Online DPO pipeline and explored GRPO algorithm, significantly improving expression diversity and anthropomorphism.}
+  \biitem{基于 Minecraft 的 AI 自动关卡生成探索：搭建 LLM Agent 驱动的程序化关卡生成原型，将自然语言关卡描述转化为可执行的建造指令序列，验证 LLM 在游戏关卡设计自动化中的可行性。}{Exploration on Minecraft-based AI automatic level generation: prototyped an LLM-agent-driven procedural level generation pipeline that translates natural-language level descriptions into executable building instruction sequences, validating the feasibility of LLMs for automated level design.}
+\end{experience}
+
+\begin{experience}{
+  cn-company  = {博世\ 中央研究院},
+  en-company  = {BOSCH CR-RIX/AP},
+  start-year  = 2024, start-month = 9,
+  end-year    = 2025, end-month   = 3,
+  role        = {Research Intern},
+  topic       = {Document Understanding},
+}
+  \biitem{负责多模态文档理解模型开发与训练：基于 T5 架构设计模型，新增二维空间编码模块与二维注意力偏置，实现文档版面结构、文字、图片信息的跨模态融合。}{Developed multimodal document understanding model based on T5 architecture; added 2D spatial encoding module and 2D attention bias for cross-modal fusion of layout structure, text, and image information.}
+  \biitem{Layout-aware Masked Language Modeling 预训练，在 CDIP 数据集子集上进行预训练，并在多页文档数据集上进行微调。}{Layout-aware Masked Language Modeling pre-training on CDIP dataset subset, followed by fine-tuning on multi-page document datasets.}
+\end{experience}
+
+\begin{experience}{
+  cn-company  = {上海大学超算队},
+  en-company  = {SHU Supercomputing Team (SHUSCT)},
+  start-year  = 2023, start-month = 9,
+  end-year    = 2024, end-month   = 6,
+  role        = {Team Member},
+  topic       = {High Performance Computing | LLM Inference},
+}
+  \biitem{开发自定义 LLM 推理引擎：多维度并行策略与动态任务调度机制，集成 FlashAttention 注意力优化、AWQ 4bit 量化及模型剪枝技术，实现 LLaMA2-70B/AquilaChat2-34B 推理加速。}{Developed custom LLM inference engine with multi-dimensional parallelism and dynamic task scheduling; integrated FlashAttention, AWQ 4-bit quantization and model pruning for LLaMA2-70B/AquilaChat2-34B inference acceleration.}
+  \biitem{超算程序性能优化：对竞赛指定超算程序进行性能剖析，应用 AVX-512 向量指令、OpenMP 多线程并行、循环展开及 MPI 分布式通信优化。}{Supercomputing program performance optimization: profiled competition programs and applied AVX-512 vector instructions, OpenMP multi-threading, loop unrolling, and MPI distributed communication optimization.}
+\end{experience}
+
+% ---- Honors and Awards ----
+\section{\iflangcn 获奖情况\else Honors and Awards\fi}
+\begin{enumerate}
+  \biaward{\textit{优秀毕业生}，上海大学}{\textit{Outstanding Graduate}, Shanghai University}{2025}{6}
+  \biaward{\textit{小米奖学金}，上海大学\&小米基金会}{\textit{Xiaomi Scholarship}, Shanghai University \& Xiaomi Foundation}{2024}{12}
+  % \biaward{\textit{本科生优秀科创团队}}{\textit{Outstanding Innovation Team}}{2024}{12}
+  \biaward{\textit{一等奖\&超级团队奖}, \ ASC24世界大学生超级计算机竞赛世界总决赛}{\textit{First Prize \& Super Team Award}, ASC24 World Collegiate Supercomputing Competition}{2024}{4}
+  \biaward{\textit{Meritorious Winner}, \ MCM美国大学生数学建模竞赛}{\textit{Meritorious Winner}, Mathematical Contest in Modeling (MCM)}{2024}{5}
+  % \biaward{\textit{学业优秀二等奖学金}}{\textit{Second Prize Academic Scholarship, twice}}{2023}{12}
+\end{enumerate}
+
+\end{document}
