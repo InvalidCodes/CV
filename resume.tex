@@ -113,7 +113,7 @@
   role        = {Research Assistant},
   topic       = {RoboTwin Bimanual Manipulation | Adv. Prof. Yao Mu},
 }
-  \biitem{为 RoboTwin 基准设计并实现双臂协作操作任务，如pick-and-place 及柔性体操作；使用 Isaac Sim 搭建仿真环境，自动化物体属性与物理参数随机化以增强模型泛化。}{Designed and implemented bimanual collaborative manipulation tasks (pick-and-place and deformable object manipulation) for RoboTwin benchmark; built Isaac Sim simulation environments with automated object property and physics parameter randomization.}
+  \biitem{为 RoboTwin 基准设计并实现双臂协作操作任务（pick-and-place 及柔性体操作）；基于 Isaac Sim 搭建仿真环境，自动化物体属性与物理参数随机化以增强策略泛化。}{Designed and implemented bimanual collaborative manipulation tasks (pick-and-place and deformable-object manipulation) for the RoboTwin benchmark; built Isaac Sim environments with automated object-property and physics-parameter randomization to improve policy generalization.}
   \biitem{通过遥操作设备与 MoCap 系统采集专家演示；编写 Python 数据处理脚本，产出约 50 条高质量轨迹供模仿学习使用。}{Collected expert demonstrations via teleoperation devices and MoCap system; developed Python data processing scripts, producing $\sim$50 high-quality trajectories for imitation learning.}
 \end{experience}
 
@@ -139,10 +139,8 @@
   role        = {AI Engineer Intern},
   topic       = {RAG \& LLM Application},
 }
-  \biitem{设计并实现双通路 RAG 问答系统：基于 LangChain 构建 PDF 解析 → 递归字符分块（chunk=1000, overlap=200）→ OpenAI Embedding → Chroma 向量检索 → LLM 生成全链路；将知识库拆分为战略摘要与产品文档两个独立向量库，分别通过 LLMChain（T=0.2）和 RetrievalQA（T=0）实现"战略对齐 + 事实检索"双视角生成。}{Designed and implemented a dual-pathway RAG QA system via LangChain: PDF parsing $\to$ recursive character chunking (chunk=1000, overlap=200) $\to$ OpenAI Embedding $\to$ Chroma vector retrieval $\to$ LLM generation; split knowledge base into strategic summary and product documentation stores, using LLMChain (T=0.2) and RetrievalQA (T=0) for dual-perspective generation.}
-  \biitem{基于 LangGraph 设计并实现 Supervisor + 4 Specialist 多智能体架构：Supervisor 节点利用 GPT-4o-mini 结构化输出进行意图分类与动态路由，PM/设计/工程/通用四个专家 Agent 各自绑定差异化工具链（RAG 检索、PRD 读取、指标查询等）并以 ReAct 模式自主推理；通过 FastAPI SSE 实现逐 token 流式响应与 Agent 状态实时推送，端到端替换原单链 RAG 系统。}{Designed and implemented Supervisor + 4 Specialist multi-agent architecture using LangGraph: Supervisor node leverages GPT-4o-mini structured output for intent classification and dynamic routing; PM/Designer/Engineer/General specialist agents each bind differentiated tool chains (RAG retrieval, PRD reader, metrics fetcher, etc.) with ReAct-style autonomous reasoning; implemented token-level SSE streaming and real-time agent status push via FastAPI, replacing the original single-chain RAG system end-to-end.}
-  \biitem{开发 AI 辅助设计评审模块，基于可用性启发式规则实现设计稿自动评分与修复建议生成；实现基于 EWMA 加权的成员技能评估模型与任务-技能匹配排序算法。}{Developed AI-assisted design review module with automatic scoring and fix suggestions based on usability heuristics; implemented EWMA-weighted skill assessment model and task-skill matching algorithm for team scheduling.}
-  \biitem{搭建 Next.js + Express + FastAPI 三层架构并实现 JWT 鉴权链路透传；基于 Socket.io 封装实时协作通信层，支撑多角色在线协同场景。}{Built Next.js + Express + FastAPI three-tier architecture with JWT authentication passthrough; encapsulated real-time collaboration layer via Socket.io for multi-role online collaboration.}
+  \biitem{基于 LangGraph 设计并实现 Supervisor + 多专家智能体架构：中枢节点完成意图分类与动态路由，各专家 Agent 绑定差异化工具链并以 ReAct 模式自主推理，端到端替换原单链 RAG 系统。}{Designed and built a LangGraph Supervisor + multi-specialist agent architecture: a router node performs intent classification and dynamic routing while specialist agents bind differentiated tool chains and reason autonomously in ReAct style, replacing the original single-chain RAG system end-to-end.}
+  \biitem{构建双通路 RAG 问答系统（战略对齐 + 事实检索双视角检索生成），并开发基于可用性启发式的 AI 设计评审与 EWMA 加权的技能-任务匹配模块。}{Built a dual-pathway RAG QA system (strategic-alignment + factual-retrieval views) and an AI design-review module with usability heuristics and an EWMA-weighted skill-to-task matching model.}
 \end{experience}
 
 \begin{experience}{
@@ -153,9 +151,8 @@
   role        = {AI Engineer Intern},
   topic       = {LLM Fine-tuning \& Inference Optimization},
 }
-  \biitem{搭建 Qwen2.5 全流程微调管线，基于 MySQL 设计数据验证流水线对 4000 条合成数据进行质量过滤，训练质量提升 13\%。}{Built Qwen2.5 full-pipeline fine-tuning workflow; designed MySQL-based data validation pipeline to filter 4K synthetic samples, improving training quality by 13\%.}
-  \biitem{构建基于 Elasticsearch 的 RAG 检索系统，支持实时索引，检索准确率提升 15\%。}{Built Elasticsearch-based RAG retrieval system with real-time indexing, improving retrieval accuracy by 15\%.}
-  \biitem{利用 TensorRT 与 ONNX Runtime 优化推理管线，通过 INT8 PTQ 量化实现推理延迟降低 30\%。}{Optimized inference pipeline with TensorRT and ONNX Runtime; achieved 30\% latency reduction via INT8 PTQ quantization.}
+  \biitem{搭建 Qwen2.5 全流程微调管线，设计数据验证流水线对 4K 合成数据做质量过滤（训练质量 +13\%），并构建基于 Elasticsearch 的实时 RAG 检索（准确率 +15\%）。}{Built an end-to-end Qwen2.5 fine-tuning pipeline with a data-validation stage that quality-filtered 4K synthetic samples ($+13\%$ training quality), and an Elasticsearch-based real-time RAG retriever ($+15\%$ accuracy).}
+  \biitem{基于 TensorRT 与 ONNX Runtime 优化推理管线，通过 INT8 PTQ 量化将推理延迟降低 30\%。}{Optimized the inference pipeline with TensorRT and ONNX Runtime, cutting latency by 30\% via INT8 PTQ quantization.}
 \end{experience}
 
 \begin{experience}{
@@ -166,8 +163,7 @@
   role        = {Software Engineer Intern},
   topic       = {Microservices \& System Architecture},
 }
-  \biitem{将系统重构为基于 Spring Boot + Docker 的微服务架构，解耦业务逻辑与第三方工业软件依赖。}{Refactored legacy monolithic system into Spring Boot + Docker microservices architecture, decoupling business logic from third-party industrial software dependencies.}
-  \biitem{基于 Kafka 设计异步任务调度引擎，提升系统并发吞吐与故障容忍；构建 RESTful API 自动化工业数据交换，使手工录入延迟降低 50\%。}{Designed Kafka-based async task scheduling engine for improved concurrency and fault tolerance; built RESTful API for automated industrial data exchange, reducing manual entry latency by 50\%.}
+  \biitem{将单体系统重构为 Spring Boot + Docker 微服务架构，并基于 Kafka 设计异步任务调度引擎、以 RESTful API 自动化工业数据交换，使手工录入延迟降低 50\%。}{Refactored a monolithic system into a Spring Boot + Docker microservice architecture with a Kafka-based async task-scheduling engine, and automated industrial data exchange via RESTful APIs, cutting manual-entry latency by 50\%.}
 \end{experience}
 
 % ---- Technical Skills ----
@@ -175,13 +171,13 @@
 \biline{%
   \textbf{编程语言：}Python、C++ \quad
   \textbf{机器学习：}PyTorch、Hugging Face Transformers、LLaMA-Factory、LoRA / QLoRA、GRPO / PPO \\
-  \textbf{工具链：}Git、Linux、Docker、K8s \quad
-  \textbf{机器人：}ROS、MuJoCo、Isaac Sim、Blender、SolidWorks
+  \textbf{机器人/仿真：}ROS、MuJoCo、Isaac Sim、Blender、SolidWorks \quad
+  \textbf{工具链：}Git、Linux、Docker、K8s
 }{%
   \textbf{Languages:} Python, C++ \quad
   \textbf{ML:} PyTorch, Hugging Face Transformers, LLaMA-Factory, LoRA / QLoRA, GRPO / PPO \\
-  \textbf{Tools:} Git, Linux, Docker, K8s \quad
-  \textbf{Robotics:} ROS, MuJoCo, Isaac Sim, Blender, SolidWorks
+  \textbf{Robotics/Sim:} ROS, MuJoCo, Isaac Sim, Blender, SolidWorks \quad
+  \textbf{Tools:} Git, Linux, Docker, K8s
 }
 
 % ---- Competitions & Projects ----

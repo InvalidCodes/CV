@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  29 MAY 2026 01:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  29 MAY 2026 02:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -803,12 +803,12 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: DBAF70A11D7F10CB1A14628E1CB055A9;1768.
  ) 
 Here is how much of TeX's memory you used:
- 26170 strings out of 473832
- 559508 string characters out of 5729482
- 987113 words of memory out of 5000000
- 48790 multiletter control sequences out of 15000+600000
+ 26188 strings out of 473832
+ 560976 string characters out of 5729482
+ 988113 words of memory out of 5000000
+ 48808 multiletter control sequences out of 15000+600000
  563758 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 114i,5n,123p,888b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 114i,5n,123p,811b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on resume.pdf (2 pages).
