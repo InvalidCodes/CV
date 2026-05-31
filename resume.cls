@@ -134,7 +134,7 @@
 % 论文条目命令
 % 用法: \paper[code链接]{年份}{会议/期刊名}{会议/期刊链接}{作者}{论文标题}
 \newcommand{\paper}[6][]{% #1(可选):code链接 #2:年份 #3:会议名 #4:会议链接 #5:作者 #6:标题
-  \textcolor{gray76}{\textbf{[#2\ |\ \href{#4}{#3}%
+  \textcolor{gray76}{\textbf{[#2\ |\ \ifthenelse{\isempty{#4}}{#3}{\href{#4}{#3}}%
   \ifthenelse{\isempty{#1}}{}{\ |\ \faGithub\ \href{#1}{Code}}%
   ]}}\ #5\ \textit{#6}%
 }

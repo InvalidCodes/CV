@@ -17,7 +17,7 @@
   \usepackage{linespacing_fix}
 
 \else
-  \setmainfont{Helvetica Neue}
+  \setmainfont{Carlito}
   % Section headers: keep texgyretermes small-caps (花体) look
   \newfontfamily\secfont[
     Path            = fonts/Main/ ,
@@ -45,7 +45,7 @@
 \pagenumbering{gobble}
 
 % ---- Personal Info ----
-\name{\biline{葛芸菲}{Faye Ge}}
+\name{\biline{葛芸菲}{Yunfei Ge}}
 \basicInfo{%
   \email{yunfeige2027@u.northwestern.edu} \textbf{|}
   \phone{(+86) 173-1768-0568} \textbf{|}
@@ -81,13 +81,12 @@
 \section{\iflangcn 论文发表\else Publications\fi}
 \begin{enumerate}
   \item \paper{2026}{NeurIPS 2026 (Under Review)}{}%
-    {\textcolor[HTML]{CC7260}{\textbf{Yunfei Ge}$^*$}, Anbang Liu$^*$, Qineng Wang$^*$, et al., Manling Li}%
+    {\textcolor[HTML]{CC7260}{\textbf{Yunfei Ge}$^*$}, Qineng Wang$^*$, et al., Jiajun Wu, Manling Li}%
     {MindTopo: Can Foundation Models Reason in Topological Space?}
   \item \paper{2026}{EMNLP 2026 (Under Review)}{}%
     {Xinyu Che$^*$, Junqi Xiong$^*$, \textcolor[HTML]{CC7260}{\textbf{Yunfei Ge}$^*$}, et al.}%
     {MMG2Skill: Can Agents Distill In-the-Wild Guides into Self-Evolving Skills?}
 \end{enumerate}
-{\footnotesize $^*$\,\iflangcn 共同一作\else Equal contribution\fi}
 
 % ---- Research Experience ----
 \section{\iflangcn 科研经历\else Research Experience\fi}
@@ -98,11 +97,22 @@
   start-year  = 2025, start-month = 9,
   ongoing     = true,
   role        = {Research Assistant},
-  topic       = {VLM / RL Spatial Reasoning | Adv. Prof. Manling Li},
+  topic       = {Agentic VLM Evaluation | Procedural Simulation | Adv. Prof. Manling Li},
 }
-  \biitem{提出 MindTopo —— 首个系统评测多模态大模型（MLLM）拓扑空间推理能力的基准；以皮亚杰认知框架将拓扑直觉拆解为五类原语（连续、分离、顺序、封闭、绳结），并在“静态感知推理”与“交互式规划（MDP）”两个认知层级上构建 13 类任务、共 11{,}016 个实例，全程参数化生成、难度可控、标签由构造保证。}{Proposed MindTopo, the first benchmark systematically evaluating topological spatial reasoning in multimodal LLMs; grounded in Piaget's cognitive framework, decomposed topological intuition into five primitives (continuity, separation, order, enclosure, knots) and built 13 task types / 11{,}016 instances across two cognitive levels --- static-scene reasoning and interactive planning (MDP) --- via parametric, difficulty-controllable generation with ground-truth labels by construction.}
-  \biitem{开发 BlenderSuperKnot 插件，从 Gauss code 程序化生成 3D 绳结数据集，并设计 Blender → MuJoCo 跨引擎管线（球关节胶囊链物理收紧 + 高保真渲染），实现基于交叉数、遮挡率、段间距的自动难度控制。}{Developed BlenderSuperKnot plugin for procedural 3D knot dataset generation from Gauss codes, and designed a cross-engine Blender $\to$ MuJoCo pipeline (ball-joint capsule chain physics tightening + high-fidelity rendering) with automatic difficulty control based on crossing number, occlusion rate, and segment spacing.}
-  \biitem{系统评测 11 个前沿 MLLM，并将图像/视频生成模型作为“视觉世界模型”进行工具增强探针；揭示模型能在静态场景识别拓扑关系、却无法在动作序列中维持与操作的关键失效模式（最优模型 54\% vs.\ 人类 97\%），并发现图像生成可补足感知通道、而视频生成系统性违背拓扑动力学，无法充当尊重拓扑不变量的世界模型。}{Systematically evaluated 11 frontier MLLMs and probed image/video generative models as visual world models under tool-use augmentation; revealed that models recognize topological relations in static scenes yet fail to maintain or operate on them across action sequences (best model 54\% vs.\ 97\% human), and showed image generation supplies a missing perception channel while video generation systematically violates topological dynamics, failing as a world model that respects topological invariants.}
+  \biitem{作为第一作者主导 MindTopo 的 benchmark architecture 与评测落地：定义 task taxonomy、数据协议与统一 task schema，将 13 类任务、11{,}016 个样本抽象为 single-turn static visual QA 与 Gym-style multi-turn agent rollout批量接入前沿 VLM 完成可复现实验。}{First-author project lead for MindTopo's benchmark architecture and evaluation delivery: defined the topological task taxonomy, data protocol, and unified task schema, abstracting 13 task types / 11{,}016 samples into single-turn static visual QA and Gym-style multi-turn agent rollouts; implemented model adapters, prompt/response parsers, trajectory logging, and metric evaluation for reproducible batched runs across 11 frontier VLMs/MLLMs.}
+  \biitem{开发 Blender Knot 插件，使用 Gauss code 打通 Blender $\to$ MuJoCo 物理仿真渲染链路。}{Led the Knots task family as one component of MindTopo's procedural simulation pipeline: developed BlenderSuperKnot to parse Gauss codes into controllable 3D knot states; connected Blender $\to$ MuJoCo for physics simulation and rendering, supporting physics tightening, camera sampling, automatic annotation, and difficulty scaling by crossing/occlusion/spacing.}
+\end{experience}
+
+\begin{experience}{
+  cn-company  = {南京大学 LINKLAB},
+  en-company  = {Nanjing University LINKLAB},
+  start-year  = 2026, start-month = 4,
+  end-year    = 2026, end-month   = 6,
+  role        = {Research Assistant},
+  topic       = {Guide-to-Skill Learning | VLM Agent},
+}
+  \biitem{作为核心贡献者参与 MMG2Skill —— 将互联网多模态教程蒸馏为可编辑、自进化 Skills 的闭环框架：VLM 抽取器把教程转为结构化 Skill，在固定 VLM Agent 的 rollout 中条件化注入，并由 Analyzer 基于轨迹根因诊断、Reviser 在不使用 benchmark 分数的前提下迭代修订 Skill。}{Core contributor to MMG2Skill --- a closed-loop framework that distills in-the-wild multimodal Web guides into editable, self-evolving skills (SKILL.md): a VLM extractor turns guides into structured skills that condition a fixed VLM agent during rollout, while an analyzer produces trajectory root-cause diagnoses and a reviser iteratively edits the skills without using benchmark scores.}
+  \biitem{构建 MMG2Skill-Bench —— 首个面向 guide-to-skill learning 的基准，覆盖 GUI 操作（OSWorld）、开放世界游戏（Minecraft）与策略卡牌（RLCard）三域共 130 个任务；在 6 个 VLM backbone 上较 vanilla agent 宏平均提升 +12.8 ~ +25.3 分，并以分析器早停节省 25\%\,$\sim$\,53\% 的尝试。}{Built MMG2Skill-Bench --- the first benchmark for guide-to-skill learning, spanning GUI control (OSWorld), open-ended gameplay (Minecraft), and strategy card play (RLCard) across 130 tasks; across 6 VLM backbones it beats vanilla agents by $+12.8$ to $+25.3$ macro-average points and saves 25--53\% of attempts via analyzer-based early stopping.}
 \end{experience}
 
 \begin{experience}{
@@ -113,19 +123,8 @@
   role        = {Research Assistant},
   topic       = {RoboTwin Bimanual Manipulation | Adv. Prof. Yao Mu},
 }
-  \biitem{为 RoboTwin 基准设计并实现双臂协作操作任务（pick-and-place 及柔性体操作）；基于 Isaac Sim 搭建仿真环境，自动化物体属性与物理参数随机化以增强策略泛化。}{Designed and implemented bimanual collaborative manipulation tasks (pick-and-place and deformable-object manipulation) for the RoboTwin benchmark; built Isaac Sim environments with automated object-property and physics-parameter randomization to improve policy generalization.}
-  \biitem{通过遥操作设备与 MoCap 系统采集专家演示；编写 Python 数据处理脚本，产出约 50 条高质量轨迹供模仿学习使用。}{Collected expert demonstrations via teleoperation devices and MoCap system; developed Python data processing scripts, producing $\sim$50 high-quality trajectories for imitation learning.}
-\end{experience}
-
-\begin{experience}{
-  cn-company  = {上海大学},
-  en-company  = {Shanghai University},
-  start-year  = 2025, start-month = 2,
-  end-year    = 2025, end-month   = 5,
-  role        = {Graduation Project},
-  topic       = {Microservice Latency Prediction | Adv. Prof. Yang Liu},
-}
-  \biitem{基于 GCN 与贝叶斯优化提出 P99 延迟预测与调度策略；在阿里巴巴生产数据集上预测误差 4.1\%，P99 延迟降低 28\%。}{Proposed P99 latency prediction and scheduling strategy based on GCN and Bayesian optimization; achieved 4.1\% prediction error and 28\% P99 latency reduction on Alibaba production dataset.}
+  \biitem{为 RoboTwin 扩展双臂协作操作任务，包括 pick-and-place 与柔性体操作；基于 Isaac Sim 搭建仿真环境，并对物体属性与物理参数随机化以提升策略泛化。}{Extended RoboTwin with bimanual collaborative manipulation tasks, including pick-and-place and deformable-object manipulation; built Isaac Sim environments with object and physics randomization to improve policy generalization.}
+  \biitem{使用遥操作设备与 MoCap 系统采集专家演示，编写清洗与转换脚本，整理约 50 条高质量轨迹用于模仿学习训练。}{Collected expert demonstrations with teleoperation devices and MoCap, then wrote cleaning and conversion scripts to produce $\sim$50 high-quality trajectories for imitation learning.}
 \end{experience}
 
 % ---- Professional Experience ----
@@ -135,12 +134,12 @@
   cn-company  = {Wegwiser（波士顿，美国）},
   en-company  = {Wegwiser (Boston, USA)},
   start-year  = 2025, start-month = 11,
-  ongoing     = true,
+  end-year    = 2026, end-month   = 4,
   role        = {AI Engineer Intern},
   topic       = {RAG \& LLM Application},
 }
-  \biitem{基于 LangGraph 设计并实现 Supervisor + 多专家智能体架构：中枢节点完成意图分类与动态路由，各专家 Agent 绑定差异化工具链并以 ReAct 模式自主推理，端到端替换原单链 RAG 系统。}{Designed and built a LangGraph Supervisor + multi-specialist agent architecture: a router node performs intent classification and dynamic routing while specialist agents bind differentiated tool chains and reason autonomously in ReAct style, replacing the original single-chain RAG system end-to-end.}
-  \biitem{构建双通路 RAG 问答系统（战略对齐 + 事实检索双视角检索生成），并开发基于可用性启发式的 AI 设计评审与 EWMA 加权的技能-任务匹配模块。}{Built a dual-pathway RAG QA system (strategic-alignment + factual-retrieval views) and an AI design-review module with usability heuristics and an EWMA-weighted skill-to-task matching model.}
+  \biitem{重构产品问答系统：基于 LangGraph 搭建 Supervisor + 多专家 Agent 架构，由中枢节点负责意图分类与动态路由，各专家 Agent 绑定不同工具链并以 ReAct 模式完成推理。}{Rebuilt the product QA system with a LangGraph Supervisor + multi-specialist agent architecture, where a central router handles intent classification and dynamic routing while specialist agents use dedicated tool chains and ReAct-style reasoning.}
+  \biitem{搭建双通路 RAG 问答流程，分别处理战略对齐与事实检索类问题；同时开发 AI 设计评审模块与 EWMA 加权的技能-任务匹配模型，支撑产品内咨询工作流。}{Built a dual-pathway RAG workflow for strategic-alignment and factual-retrieval questions; also developed an AI design-review module and an EWMA-weighted skill-to-task matching model for product consulting workflows.}
 \end{experience}
 
 \begin{experience}{
@@ -151,8 +150,8 @@
   role        = {AI Engineer Intern},
   topic       = {LLM Fine-tuning \& Inference Optimization},
 }
-  \biitem{搭建 Qwen2.5 全流程微调管线，设计数据验证流水线对 4K 合成数据做质量过滤（训练质量 +13\%），并构建基于 Elasticsearch 的实时 RAG 检索（准确率 +15\%）。}{Built an end-to-end Qwen2.5 fine-tuning pipeline with a data-validation stage that quality-filtered 4K synthetic samples ($+13\%$ training quality), and an Elasticsearch-based real-time RAG retriever ($+15\%$ accuracy).}
-  \biitem{基于 TensorRT 与 ONNX Runtime 优化推理管线，通过 INT8 PTQ 量化将推理延迟降低 30\%。}{Optimized the inference pipeline with TensorRT and ONNX Runtime, cutting latency by 30\% via INT8 PTQ quantization.}
+  \biitem{搭建 Qwen2.5 微调管线，设计数据验证流程对 4K 合成样本进行过滤，使训练数据质量提升 13\%；接入 Elasticsearch 实时 RAG 检索，问答准确率提升 15\%。}{Built a Qwen2.5 fine-tuning pipeline with data validation over 4K synthetic samples, improving training-data quality by 13\%; integrated Elasticsearch-based real-time RAG retrieval and improved QA accuracy by 15\%.}
+  \biitem{优化模型推理链路，结合 TensorRT、ONNX Runtime 与 INT8 PTQ 量化，将线上推理延迟降低 30\%。}{Optimized the inference stack with TensorRT, ONNX Runtime, and INT8 PTQ quantization, reducing online inference latency by 30\%.}
 \end{experience}
 
 \begin{experience}{
@@ -163,19 +162,21 @@
   role        = {Software Engineer Intern},
   topic       = {Microservices \& System Architecture},
 }
-  \biitem{将单体系统重构为 Spring Boot + Docker 微服务架构，并基于 Kafka 设计异步任务调度引擎、以 RESTful API 自动化工业数据交换，使手工录入延迟降低 50\%。}{Refactored a monolithic system into a Spring Boot + Docker microservice architecture with a Kafka-based async task-scheduling engine, and automated industrial data exchange via RESTful APIs, cutting manual-entry latency by 50\%.}
+  \biitem{参与单体系统微服务化改造，使用 Spring Boot 与 Docker 拆分核心服务；基于 Kafka 异步调度与 RESTful API 自动化工业数据交换，使手工录入延迟降低 50\%。}{Contributed to refactoring a monolith into Spring Boot and Docker-based microservices; automated industrial data exchange with Kafka async scheduling and RESTful APIs, reducing manual-entry latency by 50\%.}
 \end{experience}
 
 % ---- Technical Skills ----
 \section{\iflangcn 技术技能\else Technical Skills\fi}
 \biline{%
   \textbf{编程语言：}Python、C++ \quad
-  \textbf{机器学习：}PyTorch、Hugging Face Transformers、LLaMA-Factory、LoRA / QLoRA、GRPO / PPO \\
+  \textbf{LLM/机器学习：}PyTorch、Transformers、LangGraph、LLaMA-Factory、LoRA / QLoRA、GRPO / PPO、RAG \\
+  \textbf{推理/检索：}TensorRT、ONNX Runtime、Elasticsearch \quad
   \textbf{机器人/仿真：}ROS、MuJoCo、Isaac Sim、Blender、SolidWorks \quad
   \textbf{工具链：}Git、Linux、Docker、K8s
 }{%
   \textbf{Languages:} Python, C++ \quad
-  \textbf{ML:} PyTorch, Hugging Face Transformers, LLaMA-Factory, LoRA / QLoRA, GRPO / PPO \\
+  \textbf{LLM/ML:} PyTorch, Transformers, LangGraph, LLaMA-Factory, LoRA / QLoRA, GRPO / PPO, RAG \\
+  \textbf{Inference/Retrieval:} TensorRT, ONNX Runtime, Elasticsearch \quad
   \textbf{Robotics/Sim:} ROS, MuJoCo, Isaac Sim, Blender, SolidWorks \quad
   \textbf{Tools:} Git, Linux, Docker, K8s
 }
@@ -191,8 +192,8 @@
   role        = {Vision Group Member},
   topic       = {Computer Vision \& Autonomous Navigation},
 }
-  \biitem{基于 YOLOv5 训练装甲板四点关键点检测模型，结合 PnP 位姿解算输出目标相对云台的偏转角度，经串口通信下发电控实现自动瞄准；使用 OpenVINO 部署至 Intel NUC，推理帧率稳定在 60+ FPS。}{Trained YOLOv5-based armor plate keypoint detection model; combined with PnP pose estimation to compute gimbal deflection angles, transmitted to embedded controller via serial for auto-aiming; deployed with OpenVINO on Intel NUC at 60+ FPS.}
-  \biitem{基于 2D 激光雷达 + Cartographer SLAM + ROS Navigation 为自动步兵开发自主导航系统，实现动态赛场环境下的实时建图、全局路径规划与局部避障。}{Developed autonomous navigation for infantry robot using 2D LiDAR + Cartographer SLAM + ROS Navigation stack, enabling real-time mapping, global path planning, and local obstacle avoidance in dynamic arena environments.}
+  \biitem{负责视觉自瞄模块：训练 YOLOv5 装甲板四点关键点检测模型，结合 PnP 位姿解算输出云台偏转角，并通过串口下发电控；使用 OpenVINO 部署至 Intel NUC，推理帧率稳定在 60+ FPS。}{Owned the auto-aim vision module: trained a YOLOv5 armor-plate keypoint detector, used PnP pose estimation to compute gimbal offsets, and sent commands to the embedded controller via serial; deployed with OpenVINO on Intel NUC at 60+ FPS.}
+  \biitem{参与自动步兵自主导航系统开发，基于 2D LiDAR、Cartographer SLAM 与 ROS Navigation 实现实时建图、全局路径规划与局部避障。}{Contributed to autonomous navigation for the infantry robot using 2D LiDAR, Cartographer SLAM, and ROS Navigation for real-time mapping, global path planning, and local obstacle avoidance.}
 \end{experience}
 
 \end{document}
