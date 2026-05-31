@@ -99,20 +99,20 @@
   role        = {Research Assistant},
   topic       = {Agentic VLM Evaluation | Procedural Simulation | Adv. Prof. Manling Li},
 }
-  \biitem{作为第一作者主导 MindTopo 的 benchmark architecture 与评测落地：定义 task taxonomy、数据协议与统一 task schema，将 13 类任务、11{,}016 个样本抽象为 single-turn static visual QA 与 Gym-style multi-turn agent rollout批量接入前沿 VLM 完成可复现实验。}{First-author project lead for MindTopo's benchmark architecture and evaluation delivery: defined the topological task taxonomy, data protocol, and unified task schema, abstracting 13 task types / 11{,}016 samples into single-turn static visual QA and Gym-style multi-turn agent rollouts; implemented model adapters, prompt/response parsers, trajectory logging, and metric evaluation for reproducible batched runs across 11 frontier VLMs/MLLMs.}
-  \biitem{开发 Blender Knot 插件，使用 Gauss code 打通 Blender $\to$ MuJoCo 物理仿真渲染链路。}{Led the Knots task family as one component of MindTopo's procedural simulation pipeline: developed BlenderSuperKnot to parse Gauss codes into controllable 3D knot states; connected Blender $\to$ MuJoCo for physics simulation and rendering, supporting physics tightening, camera sampling, automatic annotation, and difficulty scaling by crossing/occlusion/spacing.}
+  \biitem{作为第一作者主导 MindTopo 的 benchmark architecture 与评测落地：定义 task taxonomy、数据协议与统一 task schema，将 13 类任务、11{,}016 个样本抽象为 single-turn static visual QA 与 Gym-style multi-turn agent rollout，并批量接入前沿 VLM 完成可复现实验。}{As first author, led MindTopo's benchmark architecture and evaluation delivery: defined the task taxonomy, data protocol, and unified task schema; abstracted 13 task types / 11{,}016 samples into single-turn static visual QA and Gym-style multi-turn agent rollouts; and integrated frontier VLMs for reproducible batched evaluation.}
+  \biitem{开发 Blender Knot 插件，使用 Gauss code 打通 Blender $\to$ MuJoCo 物理仿真渲染链路。}{Developed a Blender Knot plugin and used Gauss codes to build a Blender $\to$ MuJoCo physics simulation and rendering pipeline.}
 \end{experience}
 
 \begin{experience}{
-  cn-company  = {南京大学 LINKLAB},
+  cn-company  = {LINKLAB，南京大学},
   en-company  = {Nanjing University LINKLAB},
   start-year  = 2026, start-month = 4,
   end-year    = 2026, end-month   = 6,
   role        = {Research Assistant},
-  topic       = {Guide-to-Skill Learning | VLM Agent},
+  topic       = {VLM Agent | Embodied Agent Evaluation},
 }
-  \biitem{作为核心贡献者参与 MMG2Skill —— 将互联网多模态教程蒸馏为可编辑、自进化 Skills 的闭环框架：VLM 抽取器把教程转为结构化 Skill，在固定 VLM Agent 的 rollout 中条件化注入，并由 Analyzer 基于轨迹根因诊断、Reviser 在不使用 benchmark 分数的前提下迭代修订 Skill。}{Core contributor to MMG2Skill --- a closed-loop framework that distills in-the-wild multimodal Web guides into editable, self-evolving skills (SKILL.md): a VLM extractor turns guides into structured skills that condition a fixed VLM agent during rollout, while an analyzer produces trajectory root-cause diagnoses and a reviser iteratively edits the skills without using benchmark scores.}
-  \biitem{构建 MMG2Skill-Bench —— 首个面向 guide-to-skill learning 的基准，覆盖 GUI 操作（OSWorld）、开放世界游戏（Minecraft）与策略卡牌（RLCard）三域共 130 个任务；在 6 个 VLM backbone 上较 vanilla agent 宏平均提升 +12.8 ~ +25.3 分，并以分析器早停节省 25\%\,$\sim$\,53\% 的尝试。}{Built MMG2Skill-Bench --- the first benchmark for guide-to-skill learning, spanning GUI control (OSWorld), open-ended gameplay (Minecraft), and strategy card play (RLCard) across 130 tasks; across 6 VLM backbones it beats vanilla agents by $+12.8$ to $+25.3$ macro-average points and saves 25--53\% of attempts via analyzer-based early stopping.}
+  \biitem{作为核心贡献者参与 MMG2Skill —— 将互联网多模态教程蒸馏为可编辑、自进化 Skills 的闭环框架：VLM 抽取器把教程转为结构化 Skill，在固定 VLM Agent 的 rollout 中条件化注入，并由 Analyzer 基于轨迹根因诊断、Reviser 迭代修订 Skill。}{Core contributor to MMG2Skill --- a closed-loop framework that distills in-the-wild multimodal Web guides into editable, self-evolving skills: a VLM extractor converts guides into structured skills, conditions a fixed VLM agent during rollout, and iteratively refines skills through analyzer-driven trajectory diagnosis and reviser updates.}
+  \biitem{将外部 benchmark EmbodiedEval 接入 MMG2Skill 评测框架：适配其 3D scenes 与 rollout protocol，封装 VLM Agent 的 observation/action 接口、success metrics 与错误分析流程。}{Integrated the external EmbodiedEval benchmark into the MMG2Skill evaluation framework: adapted its interactive 3D-scene tasks (navigation, object interaction, spatial QA) to the unified task schema and rollout protocol, and wrapped VLM-agent observation/action interfaces, success metrics, and failure-analysis workflows.}
 \end{experience}
 
 \begin{experience}{

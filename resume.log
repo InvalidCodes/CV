@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  30 MAY 2026 23:17
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  30 MAY 2026 23:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -789,16 +789,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
-Package rerunfilecheck Info: File `resume.out' has not changed.
-(rerunfilecheck)             Checksum: 6AEF76184F07F3D9C1EA8568C762E214;1811.
+
+
+Package rerunfilecheck Warning: File `resume.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `resume.out':
+(rerunfilecheck)             Before: 6AEF76184F07F3D9C1EA8568C762E214;1811
+(rerunfilecheck)             After:  607EBD08EB79894C9502BC8D326E8FBC;1811.
  ) 
 Here is how much of TeX's memory you used:
- 26122 strings out of 473832
- 556405 string characters out of 5729482
- 986169 words of memory out of 5000000
- 48748 multiletter control sequences out of 15000+600000
+ 26113 strings out of 473832
+ 555671 string characters out of 5729482
+ 985169 words of memory out of 5000000
+ 48739 multiletter control sequences out of 15000+600000
  562822 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 114i,5n,123p,795b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 114i,5n,123p,685b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on resume.pdf (2 pages).
