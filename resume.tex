@@ -97,7 +97,7 @@
   start-year  = 2025, start-month = 9,
   ongoing     = true,
   role        = {Research Assistant},
-  topic       = {Agentic VLM Evaluation | Procedural Simulation | Adv. Prof. Manling Li},
+  topic       = {3D Spatial | VLM Benchmark | Adv. Prof. Manling Li},
 }
   \biitem{作为第一作者主导 MindTopo 的 benchmark architecture 与评测落地：定义 task taxonomy、数据协议与统一 task schema，将 13 类任务、11{,}016 个样本抽象为 single-turn static visual QA 与 Gym-style multi-turn agent rollout，并批量接入前沿 VLM 完成可复现实验。}{As first author, led MindTopo's benchmark architecture and evaluation delivery: defined the task taxonomy, data protocol, and unified task schema; abstracted 13 task types / 11{,}016 samples into single-turn static visual QA and Gym-style multi-turn agent rollouts; and integrated frontier VLMs for reproducible batched evaluation.}
   \biitem{开发 Blender Knot 插件，使用 Gauss code 打通 Blender $\to$ MuJoCo 物理仿真渲染链路。}{Developed a Blender Knot plugin and used Gauss codes to build a Blender $\to$ MuJoCo physics simulation and rendering pipeline.}
@@ -121,10 +121,10 @@
   start-year  = 2025, start-month = 4,
   end-year    = 2025, end-month   = 7,
   role        = {Research Assistant},
-  topic       = {RoboTwin Bimanual Manipulation | Adv. Prof. Yao Mu},
+  topic       = {VLA | Bimanual Manipulation Benchmark | Adv. Prof. Yao Mu},
 }
-  \biitem{为 RoboTwin 扩展双臂协作操作任务，包括 pick-and-place 与柔性体操作；基于 Isaac Sim 搭建仿真环境，并对物体属性与物理参数随机化以提升策略泛化。}{Extended RoboTwin with bimanual collaborative manipulation tasks, including pick-and-place and deformable-object manipulation; built Isaac Sim environments with object and physics randomization to improve policy generalization.}
-  \biitem{使用遥操作设备与 MoCap 系统采集专家演示，编写清洗与转换脚本，整理约 50 条高质量轨迹用于模仿学习训练。}{Collected expert demonstrations with teleoperation devices and MoCap, then wrote cleaning and conversion scripts to produce $\sim$50 high-quality trajectories for imitation learning.}
+  \biitem{围绕 RoboTwin 2.0 的双臂操作 benchmark 参与任务扩展与仿真环境调试：基于 SAPIEN / RoboTwin task API 配置协同抓取、搬运与放置类任务，支持跨机器人 embodiment 的数据采集。}{Contributed to task extension and simulation debugging for the RoboTwin 2.0 bimanual manipulation benchmark: configured collaborative grasping, transfer, and placement tasks with SAPIEN / RoboTwin task APIs; added task configs, object-pose sampling, success checkers, and camera observation settings for cross-embodiment data collection and evaluation.}
+  \biitem{接入 RoboTwin 2.0 数据生成流程，使用 domain randomization 生成多样化场景；编写轨迹清洗与格式转换脚本，将观测-动作 HDF5 数据整理为可用于模仿学习与策略评测的 expert trajectories。}{Integrated the RoboTwin 2.0 data-generation workflow and applied domain randomization (clutter, lighting, background, tabletop height, camera perturbation) to diversify scenes; wrote trajectory cleaning and format-conversion scripts to organize HDF5 observation-action data into expert trajectories for imitation learning and policy evaluation.}
 \end{experience}
 
 % ---- Professional Experience ----
@@ -177,7 +177,7 @@
   \textbf{Languages:} Python, C++ \quad
   \textbf{LLM/ML:} PyTorch, Transformers, LangGraph, LLaMA-Factory, LoRA / QLoRA, GRPO / PPO, RAG \\
   \textbf{Inference/Retrieval:} TensorRT, ONNX Runtime, Elasticsearch \quad
-  \textbf{Robotics/Sim:} ROS, MuJoCo, Isaac Sim, Blender, SolidWorks \quad
+  \textbf{Robotics/Sim:} ROS, SAPIEN, MuJoCo, Isaac Sim, Blender, SolidWorks \quad
   \textbf{Tools:} Git, Linux, Docker, K8s
 }
 
