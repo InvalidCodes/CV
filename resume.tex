@@ -7,8 +7,8 @@
 % -------------------------------------------------------
 %  LANGUAGE SWITCH — uncomment exactly ONE line
 % -------------------------------------------------------
-\langcntrue   % 中文输出 Chinese output
-% \langcnfalse  % English output (default)
+% \langcntrue   % 中文输出 Chinese output
+\langcnfalse  % English output (default)
 % -------------------------------------------------------
 
 % Chinese font support (only loaded when \langcntrue is set)
@@ -48,7 +48,7 @@
 \name{\biline{葛芸菲}{Yunfei Ge}}
 \basicInfo{%
   \email{yunfeige2027@u.northwestern.edu} \textbf{|}
-  \phone{(+86) 173-1768-0568} \textbf{|}
+  \phone{(+1) 773-423-6651} \textbf{|}
   \faGithub\ \href{https://github.com/InvalidCodes}{InvalidCodes}}
 
 % ---- Education ----
@@ -62,7 +62,7 @@
   start-year  = 2025, start-month = 9,
   end-year    = 2027, end-month   = 6,
 }
-\biline{\textit{硕士}\ 计算机工程\ |\ GPA 4.0 / 4.0}{\textit{M.S.} in Computer Engineering\ |\ GPA 4.0/4.0}
+\biline{\textit{硕士}\ 计算机工程\ |\ GPA 100 / 100}{\textit{M.S.} in Computer Engineering\ |\ GPA 4.0/4.0}
 \end{education}
 
 \begin{education}{
@@ -97,9 +97,9 @@
   start-year  = 2025, start-month = 9,
   ongoing     = true,
   role        = {Research Assistant},
-  topic       = {3D Spatial | VLM Benchmark | Adv. Prof. Manling Li},
+  topic       = {3D Spatial Reasoning | VLM Benchmark | Adv. Prof. Manling Li},
 }
-  \biitem{作为第一作者主导 MindTopo 的 benchmark architecture 与评测落地：定义 task taxonomy、数据协议与统一 task schema，将 13 类任务、11{,}016 个样本抽象为 single-turn static visual QA 与 Gym-style multi-turn agent rollout，并批量接入前沿 VLM 完成可复现实验。}{As first author, led MindTopo's benchmark architecture and evaluation delivery: defined the task taxonomy, data protocol, and unified task schema; abstracted 13 task types / 11{,}016 samples into single-turn static visual QA and Gym-style multi-turn agent rollouts; and integrated frontier VLMs for reproducible batched evaluation.}
+  \biitem{作为第一作者主导 MindTopo 的 benchmark architecture 与评测落地：定义 task taxonomy、数据协议与统一 task schema，将 13 类任务、11{,}016 个样本抽象为 single-turn static visual QA 与 Gym-style multi-turn agent rollout，并批量接入前沿 VLM 完成可复现实验。}{As first author, led MindTopo's benchmark architecture and evaluation delivery: defined the task taxonomy, data protocol, and unified task schema; abstracted 13 task types into single-turn static visual QA and Gym-style multi-turn agent rollouts; and integrated frontier VLMs for reproducible batched evaluation.}
   \biitem{开发 Blender Knot 插件，使用 Gauss code 打通 Blender $\to$ MuJoCo 物理仿真渲染链路。}{Developed a Blender Knot plugin and used Gauss codes to build a Blender $\to$ MuJoCo physics simulation and rendering pipeline.}
 \end{experience}
 
@@ -109,10 +109,10 @@
   start-year  = 2026, start-month = 4,
   end-year    = 2026, end-month   = 6,
   role        = {Research Assistant},
-  topic       = {VLM Agent | Embodied Agent Evaluation},
+  topic       = {VLM Agents | Guide-to-Skill Learning | Adv. Prof. Jiaheng Liu},
 }
   \biitem{作为核心贡献者参与 MMG2Skill —— 将互联网多模态教程蒸馏为可编辑、自进化 Skills 的闭环框架：VLM 抽取器把教程转为结构化 Skill，在固定 VLM Agent 的 rollout 中条件化注入，并由 Analyzer 基于轨迹根因诊断、Reviser 迭代修订 Skill。}{Core contributor to MMG2Skill --- a closed-loop framework that distills in-the-wild multimodal Web guides into editable, self-evolving skills: a VLM extractor converts guides into structured skills, conditions a fixed VLM agent during rollout, and iteratively refines skills through analyzer-driven trajectory diagnosis and reviser updates.}
-  \biitem{将外部 benchmark EmbodiedEval 接入 MMG2Skill 评测框架：适配其 3D scenes 与 rollout protocol，封装 VLM Agent 的 observation/action 接口、success metrics 与错误分析流程。}{Integrated the external EmbodiedEval benchmark into the MMG2Skill evaluation framework: adapted its interactive 3D-scene tasks (navigation, object interaction, spatial QA) to the unified task schema and rollout protocol, and wrapped VLM-agent observation/action interfaces, success metrics, and failure-analysis workflows.}
+  \biitem{将外部 benchmark EmbodiedEval 接入 MMG2Skill 评测框架：适配其 3D scenes 与 rollout protocol，封装 VLM Agent 的 observation/action 接口、success metrics 与错误分析流程。}{Integrated the external EmbodiedEval benchmark into the MMG2Skill evaluation framework: adapted its interactive 3D-scene tasks (navigation, object interaction, spatial QA) to the unified task schema and rollout protocol.}
 \end{experience}
 
 \begin{experience}{
@@ -121,10 +121,10 @@
   start-year  = 2025, start-month = 4,
   end-year    = 2025, end-month   = 7,
   role        = {Research Assistant},
-  topic       = {VLA | Bimanual Manipulation Benchmark | Adv. Prof. Yao Mu},
+  topic       = {Bimanual Manipulation | VLA Benchmark | Adv. Prof. Yao Mu},
 }
-  \biitem{围绕 RoboTwin 2.0 的双臂操作 benchmark 参与任务扩展与仿真环境调试：基于 SAPIEN / RoboTwin task API 配置协同抓取、搬运与放置类任务，支持跨机器人 embodiment 的数据采集。}{Contributed to task extension and simulation debugging for the RoboTwin 2.0 bimanual manipulation benchmark: configured collaborative grasping, transfer, and placement tasks with SAPIEN / RoboTwin task APIs; added task configs, object-pose sampling, success checkers, and camera observation settings for cross-embodiment data collection and evaluation.}
-  \biitem{接入 RoboTwin 2.0 数据生成流程，使用 domain randomization 生成多样化场景；编写轨迹清洗与格式转换脚本，将观测-动作 HDF5 数据整理为可用于模仿学习与策略评测的 expert trajectories。}{Integrated the RoboTwin 2.0 data-generation workflow and applied domain randomization (clutter, lighting, background, tabletop height, camera perturbation) to diversify scenes; wrote trajectory cleaning and format-conversion scripts to organize HDF5 observation-action data into expert trajectories for imitation learning and policy evaluation.}
+  \biitem{围绕 RoboTwin 2.0 的双臂操作 benchmark 参与任务扩展与仿真环境调试：基于 SAPIEN / RoboTwin task API 配置协同抓取、搬运与放置类任务，支持跨机器人 embodiment 的数据采集。}{Contributed to task extension and simulation debugging for the RoboTwin 2.0 bimanual manipulation benchmark: configured collaborative grasping, transfer, and placement tasks with SAPIEN / RoboTwin task APIs; added task configs for cross-embodiment data collection and evaluation.}
+  \biitem{接入 RoboTwin 2.0 数据生成流程，使用 domain randomization 生成多样化场景；编写轨迹清洗与格式转换脚本，将观测-动作 HDF5 数据整理为可用于模仿学习与策略评测的 expert trajectories。}{Integrated the RoboTwin 2.0 data-generation workflow and applied domain randomization to diversify scenes; wrote trajectory cleaning and format-conversion scripts to organize HDF5 observation-action data into expert trajectories for imitation learning and policy evaluation.}
 \end{experience}
 
 % ---- Professional Experience ----
@@ -148,10 +148,10 @@
   start-year  = 2025, start-month = 4,
   end-year    = 2025, end-month   = 8,
   role        = {AI Engineer Intern},
-  topic       = {LLM Fine-tuning \& Inference Optimization},
+  topic       = {LLM Fine-tuning \& Edge Device Optimization},
 }
-  \biitem{搭建 Qwen2.5 微调管线，设计数据验证流程对 4K 合成样本进行过滤，使训练数据质量提升 13\%；接入 Elasticsearch 实时 RAG 检索，问答准确率提升 15\%。}{Built a Qwen2.5 fine-tuning pipeline with data validation over 4K synthetic samples, improving training-data quality by 13\%; integrated Elasticsearch-based real-time RAG retrieval and improved QA accuracy by 15\%.}
-  \biitem{优化模型推理链路，结合 TensorRT、ONNX Runtime 与 INT8 PTQ 量化，将线上推理延迟降低 30\%。}{Optimized the inference stack with TensorRT, ONNX Runtime, and INT8 PTQ quantization, reducing online inference latency by 30\%.}
+  \biitem{搭建 Qwen2.5 微调管线，设计数据验证流程对 4K 合成样本进行过滤，使训练数据质量提升 13\%；接入 Elasticsearch 实时 RAG 检索，问答准确率提升 15\%。}{Built a Qwen2.5 fine-tuning pipeline with data validation over 4K synthetic samples; integrated Elasticsearch-based real-time RAG retrieval.}
+  \biitem{优化模型推理链路，结合 TensorRT、ONNX Runtime 与 INT8 PTQ 量化，将线上推理延迟降低 30\%。}{Optimized the inference stack with TensorRT, ONNX Runtime, and INT8 PTQ quantization.}
 \end{experience}
 
 \begin{experience}{
@@ -162,11 +162,11 @@
   role        = {Software Engineer Intern},
   topic       = {Microservices \& System Architecture},
 }
-  \biitem{参与单体系统微服务化改造，使用 Spring Boot 与 Docker 拆分核心服务；基于 Kafka 异步调度与 RESTful API 自动化工业数据交换，使手工录入延迟降低 50\%。}{Contributed to refactoring a monolith into Spring Boot and Docker-based microservices; automated industrial data exchange with Kafka async scheduling and RESTful APIs, reducing manual-entry latency by 50\%.}
+  \biitem{参与单体系统微服务化改造，使用 Spring Boot 与 Docker 拆分核心服务；基于 Kafka 异步调度与 RESTful API 自动化工业数据交换，使手工录入延迟降低 50\%。}{Contributed to refactoring a monolith into Spring Boot and Docker-based microservices; automated industrial data exchange with Kafka async scheduling and RESTful APIs.}
 \end{experience}
 
 % ---- Competitions & Projects ----
-\section{\iflangcn 竞赛 \& 项目\else Competitions \& Projects\fi}
+\section{\iflangcn 竞赛 \& 项目\else Competition\fi}
 
 \begin{experience}{
   cn-company  = {RoboMaster 机器人竞赛\ \textcolor{gray76}{全国三等奖}},
@@ -176,8 +176,8 @@
   role        = {Vision Group Member},
   topic       = {Computer Vision \& Autonomous Navigation},
 }
-  \biitem{负责视觉自瞄模块：训练 YOLOv5 装甲板四点关键点检测模型，结合 PnP 位姿解算输出云台偏转角，并通过串口下发电控；使用 OpenVINO 部署至 Intel NUC，推理帧率稳定在 60+ FPS。}{Owned the auto-aim vision module: trained a YOLOv5 armor-plate keypoint detector, used PnP pose estimation to compute gimbal offsets, and sent commands to the embedded controller via serial; deployed with OpenVINO on Intel NUC at 60+ FPS.}
-  \biitem{参与自动步兵自主导航系统开发，基于 2D LiDAR、Cartographer SLAM 与 ROS Navigation 实现实时建图、全局路径规划与局部避障。}{Contributed to autonomous navigation for the infantry robot using 2D LiDAR, Cartographer SLAM, and ROS Navigation for real-time mapping, global path planning, and local obstacle avoidance.}
+  \biitem{负责视觉自瞄模块：训练 YOLOv5 装甲板四点关键点检测模型，结合 PnP 位姿解算输出云台偏转角，并通过串口下发电控；使用 OpenVINO 部署至 Intel NUC，推理帧率稳定在 60+ FPS。}{Contributed to the auto-aim vision module: trained a YOLOv5 armor-plate keypoint detector, used PnP pose estimation to compute gimbal offsets, and sent commands to the embedded controller via serial.}
+  \biitem{参与自动步兵自主导航系统开发，基于 2D LiDAR、Cartographer SLAM 与 ROS Navigation 实现实时建图、全局路径规划与局部避障。}{Led autonomous navigation for the infantry robot using 2D LiDAR, Cartographer SLAM, and ROS Navigation for real-time mapping, global path planning, and local obstacle avoidance.}
 \end{experience}
 
 % ---- Technical Skills ----
