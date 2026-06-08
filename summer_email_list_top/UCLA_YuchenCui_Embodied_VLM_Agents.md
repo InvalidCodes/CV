@@ -1,10 +1,10 @@
 # Yuchen Cui - Embodied VLM Agents
 
-**Subject:** Summer Research Opportunity | Onsite | Embodied VLM Agents and Robot Learning
+**Subject:** Inquiry about Summer Research Projects (onsite/remote) & 27Fall Ph.D. appliacation
 
 Dear Professor Cui,
 
-I am Yunfei Ge, a first-year M.S. student in Computer Engineering at Northwestern University and a 2027 Fall Ph.D. applicant. I am already based in the U.S. and can work onsite in the following year because I have finished nearly all my courses; my F-1 status is valid for 5 years. I also have independent access to 2 A100 GPUs and API credits for frontier VLM evaluation, so I can run substantial experiments without adding much compute burden to your lab.
+I am Yunfei Ge, a first-year M.S. student in Computer Engineering at Northwestern University and a 2027 Fall Ph.D. applicant. I am already based in the U.S. and can work onsite in the following year because I have finished nearly all my courses; my visa is valid for 5 years. I also have independent access to 2 A100 GPUs and API credits for frontier VLM evaluation, so I can run substantial experiments without adding much compute burden to your lab.
 
 I am writing to ask whether there may be an opportunity to work with the UCLA Robot Intelligence Lab on a summer research project. I am particularly interested in your lab's work on efficient robot learning from human interaction, foundation-model-guided robot assistance, assistive teleoperation with VLMs, and 3D scene-graph-based embodied QA.
 
@@ -15,6 +15,5 @@ Before Northwestern, I worked with Prof. Yao Mu at Shanghai Jiao Tong University
 I have attached my CV. If there is a possible fit, I would be grateful for the chance to have a short conversation about potential summer research directions.
 
 Best regards,  
-Yunfei  
-yunfeige2027@u.northwestern.edu  
+Yunfei
 GitHub: https://github.com/InvalidCodes

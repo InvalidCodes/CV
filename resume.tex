@@ -83,7 +83,7 @@
   \item \paper{2026}{NeurIPS 2026 (Under Review)}{}%
     {\textcolor[HTML]{CC7260}{\textbf{Yunfei Ge}$^*$}, Qineng Wang$^*$, et al., Jiajun Wu, Manling Li}%
     {MindTopo: Can Foundation Models Reason in Topological Space?}
-  \item \paper{2026}{EMNLP 2026 (Under Review)}{}%
+  \item \paper{2026}{Preprint}{https://arxiv.org/pdf/2606.01993}%
     {Xinyu Che$^*$, Junqi Xiong$^*$, \textcolor[HTML]{CC7260}{\textbf{Yunfei Ge}$^*$}, et al.}%
     {MMG2Skill: Can Agents Distill In-the-Wild Guides into Self-Evolving Skills?}
 \end{enumerate}
@@ -99,8 +99,8 @@
   role        = {Research Assistant},
   topic       = {3D Spatial Reasoning | VLM Benchmark | Adv. Prof. Manling Li},
 }
-  \biitem{作为第一作者主导 MindTopo 的 benchmark architecture 与评测落地：定义 task taxonomy、数据协议与统一 task schema，将 13 类任务、11{,}016 个样本抽象为 single-turn static visual QA 与 Gym-style multi-turn agent rollout，并批量接入前沿 VLM 完成可复现实验。}{As first author, led MindTopo's benchmark architecture and evaluation delivery: defined the task taxonomy, data protocol, and unified task schema; abstracted 13 task types into single-turn static visual QA and Gym-style multi-turn agent rollouts; and integrated frontier VLMs for reproducible batched evaluation.}
-  \biitem{开发 Blender Knot 插件，使用 Gauss code 打通 Blender $\to$ MuJoCo 物理仿真渲染链路。}{Developed a Blender Knot plugin and used Gauss codes to build a Blender $\to$ MuJoCo physics simulation and rendering pipeline.}
+  \biitem{作为第一作者主导 MindTopo benchmark 设计，把 topological intuition 度量为\textbf{一条完整的认知链}：用统一 task schema 把 5 个 Piaget 拓扑原语在 reasoning 与 planning 两层同时形式化为 single-turn visual QA 元组与 Gym-style MDP rollout——同一原语先「识别」再「操作」、互为链上相邻环节而非两套独立测试集；正是这条链暴露出关键 action gap：模型能静态识别拓扑不变量，却无法在动作序列中维持它（best model GPT-5.5 仅 54.13\% vs human 97.40\%）。}{As first author, designed the MindTopo benchmark to measure topological intuition as \textbf{one complete cognitive chain}: a unified task schema formalizes 5 Piagetian primitives at both the reasoning and planning levels --- single-turn visual-QA tuples and Gym-style MDP rollouts --- so each primitive is first recognized, then operated on, as consecutive links of one chain rather than two separate test sets; this chain is what exposes the action gap: models recognize a topological invariant statically yet cannot maintain it across an action sequence (best model GPT-5.5 54.13\% vs human 97.40\%).}
+  \biitem{为这条链搭建测量装置：4 阶段 procedural-generation 流水线产出 13 类任务、11{,}016 个按构造自带 ground-truth 标签、难度可控的样本，跨 11 个前沿 VLM 做确定性可复现的批量评测，并设计与模型处理流水线对齐的 7 类 error taxonomy 精确定位认知链断点（reasoning 错误集中于早期 perception，planning 错误集中于晚期 action）；底层自研 Blender Knot 插件，用 Gauss code 打通 Blender $\to$ MuJoCo 物理仿真渲染链路作为拓扑场景与仿真 infra。}{Built the measurement rig behind it: a 4-stage procedural-generation pipeline producing 13 task types and 11{,}016 difficulty-controlled instances with ground-truth labels by construction, a deterministic reproducible batched harness over 11 frontier VLMs, and a 7-class pipeline-aligned error taxonomy that pinpoints where the chain breaks (reasoning errors concentrate at early perception, planning errors at late action); underneath, a self-built Blender Knot plugin drives a Gauss-code Blender $\to$ MuJoCo physics-simulation and rendering pipeline as the topology scene/simulation infrastructure.}
 \end{experience}
 
 \begin{experience}{
@@ -112,7 +112,7 @@
   topic       = {VLM Agents | Guide-to-Skill Learning | Adv. Prof. Jiaheng Liu},
 }
   \biitem{作为核心贡献者参与 MMG2Skill —— 将互联网多模态教程蒸馏为可编辑、自进化 Skills 的闭环框架：VLM 抽取器把教程转为结构化 Skill，在固定 VLM Agent 的 rollout 中条件化注入，并由 Analyzer 基于轨迹根因诊断、Reviser 迭代修订 Skill。}{Core contributor to MMG2Skill --- a closed-loop framework that distills in-the-wild multimodal Web guides into editable, self-evolving skills: a VLM extractor converts guides into structured skills, conditions a fixed VLM agent during rollout, and iteratively refines skills through analyzer-driven trajectory diagnosis and reviser updates.}
-  \biitem{将外部 benchmark EmbodiedEval 接入 MMG2Skill 评测框架：适配其 3D scenes 与 rollout protocol，封装 VLM Agent 的 observation/action 接口、success metrics 与错误分析流程。}{Integrated the external EmbodiedEval benchmark into the MMG2Skill evaluation framework: adapted its interactive 3D-scene tasks (navigation, object interaction, spatial QA) to the unified task schema and rollout protocol.}
+  \biitem{将外部 benchmark EmbodiedEval 接入 MMG2Skill 评测框架：适配其 3D scenes 与 rollout protocol，封装 VLM Agent 的 observation/action 接口、success metrics 与错误分析流程。}{Integrated the external EmbodiedEval benchmark into the MMG2Skill evaluation framework: adapted its interactive 3D-scene tasks (navigation, object interaction, spatial QA) to a unified task schema and rollout protocol, and wired the VLM agent's observation/action interface, success metrics, and error-analysis flow.}
 \end{experience}
 
 \begin{experience}{

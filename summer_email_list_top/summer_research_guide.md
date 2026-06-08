@@ -263,11 +263,11 @@
 
 ### 邮件 A：给 Hao Su（UCSD）
 
-**Subject: Summer Research Intern — Robotics Simulation & Manipulation (Northwestern MS)**
+**Subject:** Inquiry about Summer Research Projects (onsite/remote) & 27Fall Ph.D. appliacation
 
 Dear Prof. Su,
 
-I am Yunfei Ge, a first-year M.S. student in Computer Engineering at Northwestern University. I am writing to inquire about the possibility of joining your lab as a summer research intern (June–August 2026).
+I am Yunfei Ge, a first-year M.S. student in Computer Engineering at Northwestern University and a 2027 Fall Ph.D. applicant. I am already based in the U.S.; my visa is valid for 5 years. I am writing to inquire about the possibility of joining your lab as a summer research intern.
 
 My research background closely aligns with your group's work on simulation-based robot learning. Specifically:
 
@@ -281,18 +281,17 @@ I have attached my CV for your reference. I would be grateful for the opportunit
 Best regards,
 Yunfei Ge
 M.S. in Computer Engineering, Northwestern University
-Email: yunfeige2027@u.northwestern.edu
 GitHub: https://github.com/InvalidCodes
 
 ---
 
 ### 邮件 B：给 Yuchen Cui（UCLA）
 
-**Subject: Summer Research Intern — Robot Learning & VLM (Northwestern MS)**
+**Subject:** Inquiry about Summer Research Projects (onsite/remote) & 27Fall Ph.D. appliacation
 
 Dear Prof. Cui,
 
-I am Yunfei Ge, a first-year M.S. student in Computer Engineering at Northwestern University. I am reaching out to express my strong interest in joining the UCLA Robot Intelligence Lab as a summer research intern (June–August 2026).
+I am Yunfei Ge, a first-year M.S. student in Computer Engineering at Northwestern University and a 2027 Fall Ph.D. applicant. I am already based in the U.S.; my visa is valid for 5 years. I am reaching out to express my strong interest in joining the UCLA Robot Intelligence Lab as a summer research intern.
 
 Your research on interactive robot learning and enabling non-expert teaching resonates deeply with my own experience. During my time as a research assistant with Prof. Yao Mu at SJTU's Scale Lab, I worked on the RoboTwin project — collecting expert demonstrations through teleoperation devices and MoCap systems, and developing data processing pipelines for imitation learning. This experience gave me firsthand insight into the challenges of human demonstration quality and the bottleneck of expert-only teaching, which is exactly what your group aims to overcome.
 
@@ -303,18 +302,17 @@ I am particularly interested in your work on language corrections for robot mani
 Best regards,
 Yunfei Ge
 M.S. in Computer Engineering, Northwestern University
-Email: yunfeige2027@u.northwestern.edu
 GitHub: https://github.com/InvalidCodes
 
 ---
 
 ### 邮件 C：给 Xiaolong Wang（UCSD）— 结合线下拜访
 
-**Subject: Summer Research Inquiry + Upcoming Visit to UCSD (Northwestern MS, Embodied AI)**
+**Subject:** Inquiry about Summer Research Projects (onsite/remote) & 27Fall Ph.D. appliacation
 
 Dear Prof. Wang,
 
-I am Yunfei Ge, a first-year M.S. student in Computer Engineering at Northwestern University, with research experience in embodied AI and VLM evaluation. I will be visiting San Diego in mid-April and would be honored to have the opportunity to visit your lab and learn more about your group's research.
+I am Yunfei Ge, a first-year M.S. student in Computer Engineering at Northwestern University and a 2027 Fall Ph.D. applicant, with research experience in embodied AI and VLM evaluation. I am already based in the U.S.; my visa is valid for 5 years. I will be visiting San Diego in mid-April and would be honored to have the opportunity to visit your lab and learn more about your group's research.
 
 Your recent work on dexterous manipulation at scale (Dex1B) and whole-body humanoid control deeply inspires me. My background includes:
 
@@ -328,7 +326,6 @@ I have attached my CV for your reference. Thank you very much for your time and 
 Best regards,
 Yunfei Ge
 M.S. in Computer Engineering, Northwestern University
-Email: yunfeige2027@u.northwestern.edu
 GitHub: https://github.com/InvalidCodes
 
 ---
